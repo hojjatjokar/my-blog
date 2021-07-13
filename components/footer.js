@@ -1,27 +1,63 @@
 import Container from './container'
-import { EXAMPLE_PATH } from '@/lib/constants'
+import Icon from './icon';
 
 export default function Footer() {
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
       <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
-          <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
-            Statically Generated with Next.js.
-          </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
-            <a
-              href="https://nextjs.org/docs/basic-features/pages"
-              className="mx-3 bg-black hover:bg-white hover:text-black border border-black text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0"
-            >
-              Read Documentation
-            </a>
-            <a
-              href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
-              className="mx-3 font-bold hover:underline"
-            >
-              View on GitHub
-            </a>
+        <div className="py-16 flex flex-row lg:flex-row ">
+          <div className="flex-1">
+            <strong>
+              Let's hang out
+            </strong>
+            <ul className="flex gap-1	">
+              <li>
+                <a href="https://twitter.com/HojjatDotDev">
+                  <Icon name="twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/hojjatjokar">
+                  <Icon name="github-circled" />
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/hojjatjokar">
+                  <Icon name="linkedin" />
+                </a>
+              </li>
+              <li>
+                <a href="https://youtube.com/hojjatjokar">
+                  <Icon name="youtube" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex-1">
+            <strong>
+              Links
+            </strong>
+            <ul>
+              <li>
+                <a href="https://hojjat.dev/portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a href="https://hojjat.dev/about">About me</a>
+              </li>
+            </ul>
+          </div>
+          <div className="flex-1">
+            <strong>
+              Categories
+            </strong>
+            <ul>
+              <li>
+                <a href="https://hojjat.dev/critical-thinking">Critical thinking</a>
+              </li>
+              <li>
+                <a href="https://hojjat.dev/domain-knowledge">Domain knowledge</a>
+              </li>
+            </ul>
           </div>
         </div>
       </Container>
